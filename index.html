@@ -1,0 +1,209 @@
+import React, { useState } from 'react';
+import { 
+  Smartphone, 
+  Lightbulb, 
+  TrendingUp, 
+  Target, 
+  Rocket, 
+  Building, 
+  ArrowRight,
+  CheckCircle2
+} from 'lucide-react';
+
+export default function App() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const apps = [
+    {
+      title: "未来投資・補助金シミュレーター",
+      icon: <Rocket className="w-8 h-8 text-[#1C2956]" />,
+      desc: "設備投資やDXなど、企業の「次なる一手」を後押し。簡単な質問で使える補助金を診断し、前向きな資金ニーズを具現化します。",
+      salesTalk: "「社長が思い描いている新しい取り組み、このアプリでどれくらい補助金が出るかシミュレーションしてみませんか？」"
+    },
+    {
+      title: "自社の「隠れた強み」AI言語化ツール",
+      icon: <Lightbulb className="w-8 h-8 text-[#a61932]" />,
+      desc: "優良企業が持つ独自の技術やノウハウをAIがヒアリング。採用や新規開拓に使える「魅力的なPR文」として再定義します。",
+      salesTalk: "「御社の素晴らしい技術力、このAIを使って『採用で学生に刺さる言葉』に変換してみませんか？」"
+    },
+    {
+      title: "企業価値向上・組織力アセスメント",
+      icon: <TrendingUp className="w-8 h-8 text-[#1C2956]" />,
+      desc: "将来的な事業承継やM&Aを見据え、「今の企業価値をさらに高めるための課題」をスマホで可視化。成長へのロードマップを描きます。",
+      salesTalk: "「将来の承継に向けて、今から『企業価値をさらに高める』ための簡単なアセスメントをご用意しました。」"
+    },
+    {
+      title: "新規事業・アライアンス発掘ナビ",
+      icon: <Target className="w-8 h-8 text-[#a61932]" />,
+      desc: "TAMA Big Advanceと連動。既存事業の枠を超え、新たな市場を開拓するための「攻めのパートナーシップ」構築を支援します。",
+      salesTalk: "「現状維持ではなく、次の柱となる事業に向けて、TAMA Big Advanceで新しい提携先を探してみませんか？」"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
+      {/* Header / Hero Section */}
+      <header className="bg-gradient-to-br from-[#1C2956] to-[#111A36] text-white pb-20 pt-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="inline-block bg-[#a61932] text-white font-bold px-4 py-1 rounded-full text-sm mb-6 shadow-md">
+            多摩信用金庫 営業推進・支店長様へ向けた特別提案
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+            優良顧客の「次なる成長」をデザインする。<br className="hidden md:block" />
+            <span className="text-rose-300">前向きな資金ニーズを引き出すスマホツール。</span>
+          </h1>
+          <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl leading-relaxed">
+            現状維持に満足している優良企業に、「次なる設備投資」「企業価値向上」「DX」の<br className="hidden md:block" />
+            きっかけを与え、新たな融資・本業支援のチャンスを創出する。<br className="hidden md:block" />
+            提案型営業を飛躍させる「成長企業向けアシストツール」のご提案です。
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="bg-[#a61932] hover:bg-[#851428] text-white font-bold py-4 px-8 rounded-lg shadow-lg flex items-center justify-center transition-all">
+              デモアプリを体験する
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
+            <button className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center transition-all">
+              K&Sコンサルティングについて
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Problem Section */}
+      <section className="py-20 px-6 max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-slate-800 mb-4">優良企業への営業活動で、こんな壁を感じていませんか？</h2>
+          <div className="w-16 h-1 bg-[#a61932] mx-auto rounded"></div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative pt-12">
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#1C2956] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-md">1</div>
+            <h3 className="text-lg font-bold mb-3 text-center">資金ニーズが引き出せない</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              業績が安定している優良企業ほど、「今は特に資金は必要ないよ」と言われ、新たな提案の切り口が見つからない。
+            </p>
+          </div>
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative pt-12">
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#1C2956] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-md">2</div>
+            <h3 className="text-lg font-bold mb-3 text-center">前向きな事業承継の提案</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              単なる代替わりではなく、「企業価値をどう高めて引き継ぐか（M&A含む）」という高度なディスカッションに踏み込めない。
+            </p>
+          </div>
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative pt-12">
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#1C2956] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-md">3</div>
+            <h3 className="text-lg font-bold mb-3 text-center">専門コンサル機能の不足</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              成長企業が求める「新規事業構築」や「人事評価制度の刷新」などに対し、具体的な実行支援まで伴走できるパートナーが不在。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="bg-slate-100 py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-slate-800 mb-4">
+              その壁、<span className="text-[#a61932]">4つの「攻めのツール」</span>が突破します
+            </h2>
+            <p className="text-slate-600">お悩み相談ではなく、「企業の成長意欲」を刺激するアプローチへ。</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {apps.map((app, index) => (
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-md border-l-4 border-[#1C2956] hover:shadow-lg transition-shadow">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 bg-slate-50 rounded-xl">
+                    {app.icon}
+                  </div>
+                  <h3 className="text-xl font-bold">{app.title}</h3>
+                </div>
+                <p className="text-slate-600 mb-6">{app.desc}</p>
+                <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                  <p className="text-sm font-bold text-slate-500 mb-1">営業現場でのキラーフレーズ：</p>
+                  <p className="text-[#1C2956] font-bold italic">「 {app.salesTalk} 」</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partnership Model */}
+      <section className="py-20 px-6 max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-slate-800 mb-4">優良企業の「成長」を共に創るパートナーシップ</h2>
+          <p className="text-slate-600">アプリで前向きなニーズを発掘し、K&Sコンサルティングが高度な実行支援を担います。</p>
+        </div>
+
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            
+            <div className="flex-1 text-center">
+              <div className="w-20 h-20 bg-slate-100 text-[#1C2956] rounded-full flex items-center justify-center mx-auto mb-4 border border-slate-200">
+                <Building className="w-10 h-10" />
+              </div>
+              <h3 className="font-bold text-xl mb-2">多摩信用金庫 様</h3>
+              <ul className="text-left text-sm text-slate-600 space-y-2 inline-block font-medium">
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#a61932]"/> 前向きな資金ニーズ（設備等）の獲得</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#a61932]"/> 優良顧客の囲い込み・関係強化</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#a61932]"/> TAMA Big Advanceの高度な活用</li>
+              </ul>
+            </div>
+
+            <div className="hidden md:flex flex-col items-center justify-center">
+              <ArrowRight className="w-8 h-8 text-slate-300 mb-2" />
+              <div className="bg-slate-100 px-4 py-2 rounded-full text-xs font-bold text-slate-500">
+                成長課題・投資意欲を連携
+              </div>
+            </div>
+
+            <div className="flex-1 text-center bg-slate-50 p-6 rounded-2xl border border-slate-200">
+              <div className="w-20 h-20 bg-[#1C2956] text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-10 h-10" />
+              </div>
+              <h3 className="font-bold text-xl mb-2">K&Sコンサルティング</h3>
+              <ul className="text-left text-sm text-slate-600 space-y-2 inline-block font-medium">
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#1C2956]"/> 成長戦略・新規事業コンサルティング</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#1C2956]"/> 次世代リーダー育成・人事評価構築</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#1C2956]"/> 企業価値向上（M&A・事業承継）支援</li>
+              </ul>
+            </div>
+
+          </div>
+          
+          <div className="mt-12 text-center bg-rose-50 p-6 rounded-xl border border-rose-100">
+            <h4 className="text-[#a61932] font-bold mb-2">優良企業の経営者様にとってのメリット</h4>
+            <p className="text-rose-900 text-sm font-medium leading-relaxed">
+              「信金さんが、自社の『強み』を再認識させ、次の成長への投資を後押ししてくれた。<br className="hidden md:block"/>
+              さらにその実行を伴走してくれる一流の専門家チームも引き合わせてくれた！」という圧倒的な信頼感。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-[#1C2956] text-white py-20 px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">優良企業との「新しい対話」を始めませんか。</h2>
+          <p className="text-slate-300 mb-10 leading-relaxed">
+            このアプリがいかに経営者の「投資意欲」や「成長への課題」を自然に引き出すか、実際の画面でご体験いただけます。<br />
+            御庫の優良顧客向け推進ツールとしてどのようにカスタマイズできるか、情報交換のお時間を頂けませんか。
+          </p>
+          <button className="bg-[#a61932] hover:bg-[#851428] text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105">
+            デモ体験・お打ち合わせを予約する
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#111A36] text-slate-400 py-8 text-center text-sm">
+        <p>株式会社 K＆Sコンサルティング</p>
+        <p className="mt-2">〒194-0013 東京都町田市原町田6-27-19 平本ビル3階</p>
+      </footer>
+    </div>
+  );
+}
